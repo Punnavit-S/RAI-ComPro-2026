@@ -3,7 +3,7 @@ int main()
 {
     char username[99], grade,prograde, phygrade, calcgrade;
     int id,proscore, physcore, calcscore;
-    float avg, calcgradenum, phygradenum, progradenum;
+    float avg, calcgradenum, phygradenum, progradenum, finalgrade;
 
     printf("Calculus score: ");
     scanf(" %d", &calcscore);
@@ -14,6 +14,25 @@ int main()
     
 
     avg = (proscore+physcore+calcscore)/3;
+
+    if (avg >= 80 &&  avg<100){
+        finalgrade = 4;
+    }
+    else if (avg >= 70 &&  avg<80){
+        finalgrade = 3;
+    }
+    else if (avg >= 60 && avg<70){
+        finalgrade = 2;
+    }
+    else if (avg >= 50 && avg<60){
+        finalgrade = 1;
+    }
+    else if (avg >= 0 && avg<50){
+        finalgrade = 0;
+
+   }
+
+    
 
     if (calcscore >= 80 &&  calcscore<100){
         calcgrade = 'A';
@@ -102,6 +121,7 @@ int main()
     else if (avg >= 0 && avg<50){
         grade = 'F';
     }
+
     
     printf("%-14s%2s%8s%8s\n","subject","Score","Grade","Grade");
 
@@ -112,6 +132,8 @@ int main()
     printf("%-14s %2d %6c %8.1f\n","Physics", physcore, phygrade, phygradenum);
 
     printf("%-14s %2d %6c %8.1f\n","compro", proscore, prograde, progradenum);
+
+    printf("GPA: %.1f\n", finalgrade);
 
 
     return 0;
