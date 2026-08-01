@@ -1,14 +1,21 @@
 #include<stdio.h>
 int main()
 {
-float num1, num2;
-printf ("Enter a number: ");
-scanf ("%f", &num1);
-printf ("Enter a number: ");
-scanf ("%f", &num2);
-if (num2 != num1)
-printf ("Does not match. Try again\n");
-else
-printf ("Match\n");
+int num = 1;
+int numinput;
+do{
+printf ("Enter the number: ");
+scanf (" %d", &numinput);
+if (numinput % 2 == 0)
+    {
+        printf (" %d is even\n", numinput);
+    }
+    else
+    {
+        printf (" %d is odd\n", numinput);
+    }
+num++;
+}while (numinput!= 0);
+printf ("Exiting Program... Bye\n");
 return 0;
 }

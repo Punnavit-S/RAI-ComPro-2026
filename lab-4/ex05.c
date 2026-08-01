@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-float num1, num2;
+int num, numinput;
+int tot = 0;
 printf ("Enter a number: ");
-scanf ("%f", &num1);
-printf ("Enter a number: ");
-scanf ("%f", &num2);
-if (num2 != num1)
-printf ("Does not match. Try again\n");
-else
-printf ("Match\n");
+scanf (" %d", &numinput);
+tot = numinput;
+for (num = 1; num <= (numinput-1); num++){
+tot = tot * (num);
+}
+printf (" Factorial of %d is %d\n", numinput, tot);
 return 0;
 }

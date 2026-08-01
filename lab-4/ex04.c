@@ -1,14 +1,17 @@
 #include<stdio.h>
 int main()
 {
-float num1, num2;
+int num, numinput, tot;
+
 printf ("Enter a number: ");
-scanf ("%f", &num1);
-printf ("Enter a number: ");
-scanf ("%f", &num2);
-if (num2 != num1)
-printf ("Does not match. Try again\n");
-else
-printf ("Match\n");
+scanf (" %d", &numinput);
+
+printf ("Multiplication Table for %d:\n", numinput);
+for (num = 1; num<= 12; num++ ){
+    
+tot = numinput * num;
+
+printf (" %d x %d = %d\n", numinput, num, tot);
+}
 return 0;
 }
